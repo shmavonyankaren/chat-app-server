@@ -30,7 +30,7 @@ app.post("/", (req, res) => {
       .forEach(({ user }) => {
         if (!user.online) {
           twilioClient.messages
-            .creaet({
+            .create({
               body: `You have a new message from ${message.user.fullName} - ${message.text}`,
               messagingServiceSid: messagingServieSid,
               to: user.phoneNumber,
